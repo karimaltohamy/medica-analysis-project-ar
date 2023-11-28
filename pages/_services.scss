@@ -1,0 +1,140 @@
+@import "../components/variables";
+
+// start faq_section
+.faq_section {
+  .line {
+    .text {
+      .subtitle {
+        font-size: 20px;
+        color: $primary-color;
+      }
+
+      .title {
+        font-weight: 700;
+        font-size: 40px;
+      }
+
+      .desc {
+        color: gray;
+        line-height: 1.7;
+        margin-bottom: 0;
+      }
+    }
+
+    .accordion {
+      .accordion-item {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        border: none;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        .accordion-button {
+          border: none;
+          border-radius: 7px;
+          font-weight: 600;
+
+          &::after {
+            margin-right: auto;
+            margin-left: unset;
+          }
+
+          &:not(.collapsed) {
+            background-color: $primary-color !important;
+            color: white !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .faq_section {
+    .line {
+      .text {
+        text-align: center;
+
+        .subtitle {
+          font-size: 15px;
+        }
+
+        .title {
+          font-size: 25px;
+        }
+
+        .desc {
+          font-size: 13px;
+        }
+      }
+
+      .accordion {
+        .accordion-item {
+          .accordion-button {
+            padding: 10px;
+          }
+
+          .accordion-collapse {
+            font-size: 14px;
+
+            .accordion-body {
+              padding: 7px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end faq_section
+
+// start our_services_package
+.our_services_package {
+  background-color: rgb(242 248 255);
+  .head {
+    text-align: center;
+
+    .title {
+      font-weight: 700;
+      font-size: 40px;
+    }
+  }
+
+  .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+
+    .box {
+      background-color: white;
+      padding: 30px 20px;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid #ebebeb;
+
+      .icon {
+        text-align: center;
+        margin-bottom: 15px;
+
+        img {
+          width: 80px;
+        }
+      }
+
+      .title {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      p {
+        span {
+          color: gray;
+        }
+      }
+    }
+  }
+}
+// end our_services_package

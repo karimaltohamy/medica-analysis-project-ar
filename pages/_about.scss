@@ -1,0 +1,209 @@
+@import "../components/variables";
+
+// start our_doctors_section
+.our_doctors_section {
+  .head {
+    .subtitle {
+      font-size: 20px;
+      color: $primary-color;
+      font-weight: 600;
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: 700;
+    }
+  }
+
+  .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+
+    .box {
+      background-color: $primary-color;
+      color: white;
+      border-radius: 10px;
+      overflow: hidden;
+
+      .image {
+        width: 100%;
+        height: 320px;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-bottom-left-radius: 100px;
+        }
+
+        .icon {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: white;
+          border-radius: 50%;
+
+          i {
+            font-size: 18px;
+            color: black;
+          }
+        }
+      }
+
+      .content {
+        padding: 15px;
+
+        .position {
+          font-size: 15px;
+        }
+
+        .title {
+          font-size: 21px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .our_doctors_section {
+    .head {
+      text-align: center;
+
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .title {
+        font-size: 23px;
+      }
+    }
+
+    .boxs {
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+
+      .box {
+        .content {
+          .desc {
+            margin-bottom: 0;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+// end our_doctors_section
+
+// start reviews_section
+.reviews_section {
+  padding: 70px 0;
+  background-color: rgb(236 236 236);
+
+  .subtitle {
+    font-size: 20px;
+    color: $primary-color;
+  }
+
+  .title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .desc {
+    color: gray;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 80px;
+
+    .box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+
+      .head_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        .profile {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+          }
+
+          h6 {
+            margin-bottom: 0;
+            font-size: 16px;
+          }
+
+          span {
+            color: gray;
+            font-size: 13px;
+          }
+        }
+
+        .stars {
+          i {
+            font-size: 14px;
+            color: #ffa121;
+          }
+        }
+      }
+
+      .desc {
+        margin-bottom: 0;
+        line-height: 1.7;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews_section {
+    padding: 40px 0;
+
+    .subtitle {
+      font-size: 14px;
+    }
+
+    .title {
+      font-size: 22px;
+    }
+
+    .desc {
+      font-size: 13px;
+    }
+
+    .boxs {
+      margin-top: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+  }
+}
+// end reviews_section
